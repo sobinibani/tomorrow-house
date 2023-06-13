@@ -1,11 +1,11 @@
+@import './constants/colors';
+
 @import './base/fonts';
 @import './base/normalize';
 @import './base/reset';
 
-p {
-    color: #000;
-}
-
 * {
     font-family: 'Noto Sans KR', sans-serif;
 }
+
+
