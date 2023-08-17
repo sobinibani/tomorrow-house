@@ -1,0 +1,70 @@
+%form-base {
+    @include text-style(16, $primary);
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    background-color: $white;
+    border: 1px solid $border;
+    border-radius: 4px;
+    appearance: none; //화살표 초기화 ,,
+    transition:  background-color 200ms ease-in-out;
+
+    &::placeholder {
+        color:$tertiary
+    }
+
+    &:not(:disabled):hover {
+        background-color: $background;
+    }
+
+    &disabled {
+        cursor: not-allowed;
+        opacity: 0.4;
+    }
+}
+
+.form-select, .form-input {
+    @extend %form-base;
+}
+
+// select
+.select-group {
+    position: relative;
+    &.is-active {
+        .form-select {
+            border-color: $blue;
+        }
+        .ic-caret {
+            color: $blue;
+        }
+    }
+
+    .form-select {
+        padding-right: 40px;
+        text-overflow: ellipsis;
+    }
+    .ic-caret {
+        @include pos-center-y;
+        right:8px;
+        font-size: 24px;
+        color: $tertiary;
+        position: absolute;
+        pointer-events: none; // ★이거 누르면 select작동안했는데 .. 얘 눌러도 아래에 있는 select가 열림
+
+    }
+}
+
+//input 
+.input-group {
+    position: relative;
+    .form-input {
+        padding-left: 40px;
+    }
+    .ic-search {
+        @include pos-center-y;
+        left: 10px;
+        font-size:20px;
+        color:$secondary;
+    }
+}
