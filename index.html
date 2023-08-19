@@ -19,7 +19,66 @@
     </head>
 
     <body>
+        <header class="gnb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="gnb-left">
+                            <h1 class="logo">
+                                <a href="/">
+                                    <img src="./assets/images/Logo.svg" alt="내일의 집">
+                                </a>
+                            </h1> 
+                            <nav class="sm-hidden">
+                                <h2 class="visually-hidden">메뉴</h2>
+                                <!--문법적으로 nav와 같은 section?은 그 안에 반드시 헤딩태그-->
+                                <ul class="gnb-nav-list">
+                                    <li class="gnb-nav-item"><a href="/">커뮤니티</a></li>
+                                    <li class="gnb-nav-item"><a href="/">스토어</a></li>
+                                    <li class="gnb-nav-item"><a href="/">인테리어시공</a></li>
+                                </ul>
+                            </nav>
+                            <button type="button" aria-label="메뉴 열기 버튼" class="sm-only gnb-icon-button">
+                                <i class="ic-menu"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="gnb-right">
+                            <div class="input-group lg-only">
+                                <i class="ic-search" aria-hidden></i>
+                                <input class="form-input" type="text" placeholder="스토어 검색"/>
+                            </div>
 
+                            <div class="button-group">
+                                <button type="button" aria-label="검색창 열기 버튼" class="lg-hidden gnb-icon-button">
+                                    <i class="ic-search"></i>
+                                </button>
+                                <a href="/" aria-label="스크랩북 페이지로 이동" class="sm-hidden gnb-icon-button">
+                                    <i class="ic-bookmark"></i>
+                                </a>
+                                <a href="/" aria-label="내 소식 페이지로 이동" class="sm-hidden gnb-icon-button">
+                                    <i class="ic-bell"></i>
+                                </a>
+                                <a href="/" aria-label="장바구니 페이지로 이동" class="sm-hidden gnb-icon-button">
+                                    <i class="ic-cart"></i>
+                                </a>
+                                
+                                <button type="button" aria-label="마이메뉴 열기 버튼" class="sm-hidden" gnb-avatar-button>
+                                    <div class="avatar-32">
+                                        <img src="./assets/images/img-user-01.jpg" alt="사딸라 아저씨">
+                                    </div>
+                                </button>
+                            </div>
+                
+                            <button type="button" class="sm-hidden btn-primary btn-40">
+                                글쓰기
+                                <i class="ic-chevron" aria-hidden></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
     </body>
 </html>
 
