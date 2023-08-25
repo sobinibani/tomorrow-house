@@ -31,6 +31,13 @@
         display: none !important;
     }
 }
+
+.sm-hidden {
+    // 모바일에서 안보이게
+    @media screen and (max-width: $md-breakpoint - 1) {
+        display: none !important;
+    }
+}
 .md-hidden {
     // 태블릿에서 안보이게
     @media screen and (min-width: $md-breakpoint) and (max-width: $lg-breakpoint - 1) {

@@ -3,6 +3,7 @@
     padding: 0 8px;
     border-radius: 4px;
     font-weight: 700;
+    justify-content: center;
     &:disabled {
         // 클릭을 할 수 없는 상태 class가 아님 .. hover처럼 상태의 종류 
         opacity: 0.4;
