@@ -1,8 +1,14 @@
 .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width:240px;
+    height: 100vh;
     padding: 32px 20px;
     background-color: $white;
-    border: 1px solid red;
+    overflow-y: auto;
+    z-index: $sidebar-level;
+    overscroll-behavior: contain;
 
     &-header{
         padding: 0 12px;
@@ -82,5 +88,8 @@
                 }
             }
         }
+    }
+    &::-webkit-scrollbar {
+        display: none;
     }
 }
