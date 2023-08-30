@@ -1,4 +1,6 @@
 .lnb {
+    $lnb-height-sm: 40px;
+    $lnb-height-md: 50px;
     $lnb-link-padding: 8px;
     $grid-margin: $sm-margin + $gutter / 2;
 
@@ -9,7 +11,7 @@
         @include inline-flexbox(start); 
         white-space: nowrap; 
         border-bottom: 1px solid $border;
-        height: 40px;
+        height: $lnb-height-sm;
         margin-left: -#{$grid-margin};
         padding: 0 #{$grid-margin - $lnb-link-padding};
     }
@@ -19,14 +21,34 @@
             @include inline-flexbox; 
             @include text-style(13, $dark);
             font-weight: 700;
-            height: 40px;
+            height: $lnb-height-sm;
             padding: 0px $lnb-link-padding;
             border-bottom: 2px solid transparent;
+            &:hover {color:$blue;}
         }
         &.is-active {
             a {
                 color: $blue;
                 border-color: $blue;
+            }
+        }
+    }
+
+    @include responsive(T) {
+        height: $lnb-height-md;
+        overflow-x: visible;
+        border-bottom: 1px solid $border;
+        &-list {
+            height: auto;
+            padding: 0;
+            margin-left: 0;
+            border-bottom: 0;
+        }
+        &-item {
+            height: $lnb-height-md;
+            a {
+                @include text-style(14);
+                height: $lnb-height-md;
             }
         }
     }
