@@ -18,120 +18,172 @@
   </head>
 
 <body>
-  <header class="gnb">
-  <div class="container">
-      <div class="row">
-          <div class="col-sm-4">
-              <div class="gnb-wrapper">
-                  <div class="gnb-left">
-                      <h1 class="logo">
-                          <a href="/">
-                              <img src="./assets/images/Logo.svg" alt="내일의 집">
-                          </a>
-                      </h1> 
-                      <nav class="sm-hidden">
-                          <h2 class="visually-hidden">메뉴</h2>
-                          <!--문법적으로 nav와 같은 section?은 그 안에 반드시 헤딩태그-->
-                          <ul class="gnb-nav-list">
-                              <li class="gnb-nav-item"><a href="/">커뮤니티</a></li>
-                              <li class="gnb-nav-item is-active"><a href="/">스토어</a></li>
-                              <li class="gnb-nav-item"><a href="/">인테리어시공</a></li>
-                          </ul>
-                      </nav>
-                      <button type="button" aria-label="메뉴 열기 버튼" class="sm-only gnb-icon-button is-menu">
-                          <i class="ic-menu"></i>
-                      </button>
-                  </div>
-                  
-                  <div class="gnb-right">
-                    <div class="gnb-search lg-only">
-                      <div class="input-group">
-                          <i class="ic-search" aria-hidden=""></i>
-                          <input class="form-input" type="text" placeholder="스토어 검색">
-                      </div>
-                      <section class="search-history">
-                        <header class="search-history-header">
-                          <h2 class="title">최근 검색어</h2>
-                          <button type="button">전체 삭제</button>
-                        </header>
-            
-                        <div class="search-history-content">
-                          <ol class="search-history-list">
-                            <li class="search-history-item">
-                              <button type="button" class="word-button">김버그</button>
-                              <button type="button" class="delete-button"><i class="ic-close" aria-lable="검색어 삭제"></i></button>
-                            </li>
-                            <li class="search-history-item">
-                              <button type="button" class="word-button">버그</button>
-                              <button type="button" class="delete-button"><i class="ic-close" aria-lable="검색어 삭제"></i></button>
-                            </li>
-                            <li class="search-history-item">
-                              <button type="button" class="word-button">튕김버그</button>
-                              <button type="button" class="delete-button"><i class="ic-close" aria-lable="검색어 삭제"></i></button>
-                            </li>
-                          </ol>
-                        </div>
-                      </section>
+  <header class="global-header">
+    <div class="gnb">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="gnb-wrapper">
+                    <div class="gnb-left">
+                        <h1 class="logo">
+                            <a href="/">
+                                <img src="./assets/images/Logo.svg" alt="내일의 집">
+                            </a>
+                        </h1> 
+                        <nav class="sm-hidden">
+                            <h2 class="visually-hidden">메뉴</h2>
+                            <!--문법적으로 nav와 같은 section?은 그 안에 반드시 헤딩태그-->
+                            <ul class="gnb-nav-list">
+                                <li class="gnb-nav-item"><a href="/">커뮤니티</a></li>
+                                <li class="gnb-nav-item is-active"><a href="/">스토어</a></li>
+                                <li class="gnb-nav-item"><a href="/">인테리어시공</a></li>
+                            </ul>
+                        </nav>
+                        <button type="button" aria-label="메뉴 열기 버튼" class="sm-only gnb-icon-button is-menu">
+                            <i class="ic-menu"></i>
+                        </button>
                     </div>
-                      
-                      <!-- note : 로그인을 한 경우-->
-                      <div class="button-group">
-                          <button type="button" aria-label="검색창 열기 버튼" class="lg-hidden gnb-icon-button is-search">
-                              <i class="ic-search"></i>
-                          </button>
-                          <a href="/" aria-label="스크랩북 페이지로 이동" class="sm-hidden gnb-icon-button">
-                              <i class="ic-bookmark"></i>
-                          </a>
-                          <a href="/" aria-label="내 소식 페이지로 이동" class="sm-hidden gnb-icon-button">
-                              <i class="ic-bell"></i>
-                          </a>
-                          <a href="/" aria-label="장바구니 페이지로 이동" class="gnb-icon-button is-cart">
-                              <i class="ic-cart"></i>
-                              <strong class="badge">5</strong>
-                          </a>
-                          
-                          <div class="my-menu sm-hidden">
-                              <button type="button" aria-label="마이메뉴 열기 버튼" class="my-menu-button sm-hidden">
-                                  <img src="./assets/images/img-user-01.jpg" alt="사딸라 아저씨">
-                              </button>
-                              
-                              <div class="my-menu-content">
-                                  <ul class="my-menu-list">
-                                      <li class="my-menu-item"><a href="#">마이페이지</a></li>
-                                      <li class="my-menu-item"><a href="#">나의 쇼핑</a></li>
-                                      <li class="my-menu-item"><a href="#">이벤트</a></li>
-                                      <li class="my-menu-item"><button type="button">로그아웃</button></li>
-                                  </ul>
-                              </div>
+                    
+                    <div class="gnb-right">
+                      <div class="gnb-search lg-only">
+                        <div class="input-group">
+                            <i class="ic-search" aria-hidden=""></i>
+                            <input class="form-input" type="text" placeholder="스토어 검색">
+                        </div>
+                        <section class="search-history">
+                          <header class="search-history-header">
+                            <h2 class="title">최근 검색어</h2>
+                            <button type="button">전체 삭제</button>
+                          </header>
+              
+                          <div class="search-history-content">
+                            <ol class="search-history-list">
+                              <li class="search-history-item">
+                                <button type="button" class="word-button">김버그</button>
+                                <button type="button" class="delete-button"><i class="ic-close" aria-lable="검색어 삭제"></i></button>
+                              </li>
+                              <li class="search-history-item">
+                                <button type="button" class="word-button">버그</button>
+                                <button type="button" class="delete-button"><i class="ic-close" aria-lable="검색어 삭제"></i></button>
+                              </li>
+                              <li class="search-history-item">
+                                <button type="button" class="word-button">튕김버그</button>
+                                <button type="button" class="delete-button"><i class="ic-close" aria-lable="검색어 삭제"></i></button>
+                              </li>
+                            </ol>
                           </div>
+                        </section>
                       </div>
-
-                      <!-- note : 로그인을 하지않은 경우-->
-                      <!-- <div class="button-group">
-                          <button type="button" aria-label="검색창 열기 버튼" 
-                          class="lg-hidden gnb-icon-button is-search">
-                              <i class="ic-search"></i>
-                          </button>
-                          <a href="/" aria-label="장바구니 페이지로 이동" 
-                          class="gnb-icon-button is-cart">
-                              <i class="ic-cart"></i>
-                          </a>
-                          <div class="gnb-auth sm-hidden">
-                              <a href="#">로그인</a>
-                              <a href="#">회원가입</a>
-                          </div>
-                      </div> -->
-          
-                      <button type="button" class="sm-hidden btn-primary btn-40">
-                          글쓰기
-                          <i class="ic-chevron" aria-hidden=""></i>
-                      </button>
-                  </div>
-              </div>
-          </div>
-      </div>
+                        
+                        <!-- note : 로그인을 한 경우-->
+                        <div class="button-group">
+                            <button type="button" aria-label="검색창 열기 버튼" class="lg-hidden gnb-icon-button is-search">
+                                <i class="ic-search"></i>
+                            </button>
+                            <a href="/" aria-label="스크랩북 페이지로 이동" class="sm-hidden gnb-icon-button">
+                                <i class="ic-bookmark"></i>
+                            </a>
+                            <a href="/" aria-label="내 소식 페이지로 이동" class="sm-hidden gnb-icon-button">
+                                <i class="ic-bell"></i>
+                            </a>
+                            <a href="/" aria-label="장바구니 페이지로 이동" class="gnb-icon-button is-cart">
+                                <i class="ic-cart"></i>
+                                <strong class="badge">5</strong>
+                            </a>
+                            
+                            <div class="my-menu sm-hidden">
+                                <button type="button" aria-label="마이메뉴 열기 버튼" class="my-menu-button sm-hidden">
+                                    <img src="./assets/images/img-user-01.jpg" alt="사딸라 아저씨">
+                                </button>
+                                
+                                <div class="my-menu-content">
+                                    <ul class="my-menu-list">
+                                        <li class="my-menu-item"><a href="#">마이페이지</a></li>
+                                        <li class="my-menu-item"><a href="#">나의 쇼핑</a></li>
+                                        <li class="my-menu-item"><a href="#">이벤트</a></li>
+                                        <li class="my-menu-item"><button type="button">로그아웃</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+  
+                        <!-- note : 로그인을 하지않은 경우-->
+                        <!-- <div class="button-group">
+                            <button type="button" aria-label="검색창 열기 버튼" 
+                            class="lg-hidden gnb-icon-button is-search">
+                                <i class="ic-search"></i>
+                            </button>
+                            <a href="/" aria-label="장바구니 페이지로 이동" 
+                            class="gnb-icon-button is-cart">
+                                <i class="ic-cart"></i>
+                            </a>
+                            <div class="gnb-auth sm-hidden">
+                                <a href="#">로그인</a>
+                                <a href="#">회원가입</a>
+                            </div>
+                        </div> -->
+            
+                        <button type="button" class="sm-hidden btn-primary btn-40">
+                            글쓰기
+                            <i class="ic-chevron" aria-hidden=""></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
+  
+    <nav class="lnb">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <h1 class="visually-hidden">스토어 메뉴</h1>
+            <ul class="lnb-list">
+              <li class="lnb-item is-active">
+                <a href="/">스토어</a>
+              </li>
+              <li class="lnb-item">
+                <a href="/">카테고리</a>
+              </li>
+              <li class="lnb-item">
+                <a href="/">신혼가구</a>
+              </li>
+              <li class="lnb-item">
+                <a href="/">베스트</a>
+              </li>
+              <li class="lnb-item">
+                <a href="/">오늘의딜</a>
+              </li>
+              <li class="lnb-item">
+                <a href="/">연휴특가</a>
+              </li>
+              <li class="lnb-item">
+                <a href="/">월동준비</a>
+              </li>
+              <li class="lnb-item">
+                <a href="/">리퍼마켓</a>
+              </li>
+              <li class="lnb-item">
+                <a href="/">
+                  기획전
+                  <i class="ic-new" lang="en" aria-label="New"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
   </header>
+
+  <main class="product-show">
+    <!--상품 상세페이지 본론-->
+  </main>
+
+  <footer class="global-footer">
+
+  </footer>
 
   <aside class="sidebar sm-only">
   <header class="sidebar-header">
@@ -329,48 +381,6 @@
   </div>
   </aside>
   <!--search-modal-->
-
-  <nav class="lnb">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <h1 class="visually-hidden">스토어 메뉴</h1>
-          <ul class="lnb-list">
-            <li class="lnb-item is-active">
-              <a href="/">스토어</a>
-            </li>
-            <li class="lnb-item">
-              <a href="/">카테고리</a>
-            </li>
-            <li class="lnb-item">
-              <a href="/">신혼가구</a>
-            </li>
-            <li class="lnb-item">
-              <a href="/">베스트</a>
-            </li>
-            <li class="lnb-item">
-              <a href="/">오늘의딜</a>
-            </li>
-            <li class="lnb-item">
-              <a href="/">연휴특가</a>
-            </li>
-            <li class="lnb-item">
-              <a href="/">월동준비</a>
-            </li>
-            <li class="lnb-item">
-              <a href="/">리퍼마켓</a>
-            </li>
-            <li class="lnb-item">
-              <a href="/">
-                기획전
-                <i class="ic-new" lang="en" aria-label="New"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
 
 <div class="overlay" aria-hidden=""></div>
 </body></html>
