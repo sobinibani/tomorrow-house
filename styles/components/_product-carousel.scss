@@ -5,13 +5,12 @@
     position: relative;
     &-thumbnail {
         // display: none;
-        .thumbnail {
-            &-list {
+            .thumbnail-list {
                 @include flexbox;
                 @include pos-center-x;
                 bottom: 16px;
             }
-            &-item {
+            .thumbnail-item {
                 @include flexbox;
                 margin: 0 4px;
 
