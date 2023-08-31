@@ -4,6 +4,7 @@
 @import './constants/box-shadows';
 @import './constants/grids';
 @import './constants/z-indexes';
+@import './constants/demensions';
 
 @import './base/fonts';
 @import './base/normalize';
@@ -37,6 +38,7 @@
 @import './layouts/overlay';
 @import './layouts/search-modal';
 @import './layouts/lnb';
+@import './layouts/global-header';
 @import './layouts/global-footer';
 
 // * {
