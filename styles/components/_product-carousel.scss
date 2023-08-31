@@ -1,14 +1,17 @@
 .product-carousel {
     $grid-margin:15px;
-    margin-left: -$grid-margin;
-    margin-right: -$grid-margin;
+
     position: relative;
-    &-thumbnail {
+    &-slider {
+        margin-left: -$grid-margin;
+        margin-right: -$grid-margin;
+    }
+        &-thumbnail {
         // display: none;
-            .thumbnail-list {
-                @include flexbox;
                 @include pos-center-x;
                 bottom: 16px;
+            .thumbnail-list {
+                @include flexbox(center);
             }
             .thumbnail-item {
                 @include flexbox;
@@ -31,11 +34,45 @@
                 }
             }
         }
-    }
 
     img {
         display: block;
         width: 100%;
         height: auto;
+    }
+
+    @include responsive(T) {
+        padding-right: 30px;
+        &-slider {
+            margin: 0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+        &-thumbnail {
+            position: static;
+            transform: none;
+            .thumbnail-list {
+                justify-content: flex-start;
+            }
+            .thumbnail-item {
+                margin: 0 8px 0 0;
+                button {
+                    @include flexbox(center,center)
+                    opacity: 1;
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 4px;
+                    overflow: hidden;
+                    img {display: block; width: 56px;}
+                }
+                &.tns-nav-active {
+                    button {
+                        transform: none;
+                        border: 2px solid $blue;
+                    }
+                }
+            }
+        }
     }
 }
