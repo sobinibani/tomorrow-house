@@ -16,7 +16,8 @@
         }
         .info-review {
             @include flexbox(start);
-            .star-rating-13 {
+            .star-rating {
+                @include star-rating(13px);
                 margin-right: 8px;
             }
             p {
@@ -29,18 +30,18 @@
         margin-bottom: 16px;
         .info-original-price {
             @include flexbox(start);
-            .discount-rate {
-                @include inline-flexbox(start);
-                font-size: 20px;
-                line-height: 24px;
-                font-weight: 700;
-                color: $blue;
-                .rate{
-                    font-family: $font-price;
-                }
-                .percent{
-                    font-family: $font-main;
-                }
+        }
+        .discount-rate {
+            @include inline-flexbox(start);
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 700;
+            color: $blue;
+            .rate{
+                font-family: $font-price;
+            }
+            .percent{
+                font-family: $font-main;
             }
         }
         .info-sale-price{
@@ -56,11 +57,63 @@
         }
     }
     &-delivery {
+        @include text-style(16, $primary);
         border-top: 1px solid $border;
         padding-top: 12px;
         span {
             display: block;
             margin-bottom: 2px;
+        }
+    }
+
+    @include responsive(T) {
+        padding: 0;
+        &-header {
+            .info-brand {
+                display: block;
+                margin-bottom: 8px;
+            }
+            .info-title {
+                @include text-style(24);
+                margin-bottom: 8px;
+            }
+            .info-review {
+                .star-rating{
+                    @include star-rating(16px);
+                }
+            }
+        }
+        &-price {
+            .info-price-wrapper {
+                @include flexbox(start, end);
+                margin-bottom: 12px;
+            }
+            .discount-rate {
+                align-items: flex-end;
+                margin-right: 16px;
+                .rate{
+                    font-size: 44px;
+                    line-height: 36px;
+                }
+                .percent{
+                    line-height: 20px;
+                }
+            }
+            .info-sale-price{
+                margin-bottom: 0;
+                .price-32 {margin-right: 8px;}
+            }
+            .info-point {
+                margin-bottom: 20px;
+            }
+        }
+        &-delivery {
+            padding-top: 16px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $border;
+            span {
+                margin-bottom: 8px;
+            }
         }
     }
 }
