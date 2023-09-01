@@ -19,6 +19,9 @@
             position: absolute;
             top: 8px;
             right: 8px;
+            &:hover,&:active {
+                opacity: 0.4;
+            }
         }
     }
     .checkout-footer {
@@ -26,6 +29,15 @@
         .checkout-select {
             position: relative;
             display: inline-block;
+
+            &:hover {
+                select {
+                    border: 1px solid $tertiary;
+                }
+                i {
+                    color: $secondary;
+                }
+            }
             select {
                 @include text-style(14, $primary);
                 line-height: 1;
@@ -36,6 +48,7 @@
                 border: 1px solid $border;
                 border-radius: 3px;
                 appearance: none;
+                transition: border-color 100ms ease-in-out;
             }
             i {
                 @include pos-center-y;
@@ -43,6 +56,7 @@
                 font-size: 20px;
                 color: $tertiary;
                 pointer-events: none;
+                transition: color 100ms ease-in-out;
             }
         }
     }
