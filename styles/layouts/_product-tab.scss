@@ -6,6 +6,7 @@
     height: 40px;
     border-bottom: 1px solid $border;
     background-color: $white;
+    z-index: $product-tab-level;
     &-list {
         @include flexbox();
         margin: 0 -#{$grid-margin};
