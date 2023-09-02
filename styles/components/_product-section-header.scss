@@ -25,8 +25,8 @@
         @include flexbox;
         @include pos-center-y;
         right: -#{$grid-margin};
-        width: 22px + ($grid-margin*2px);
-        height: 22px + ($grid-margin*2px);
+        width: 22px + ($grid-margin*2);
+        height: 22px + ($grid-margin*2);
         font-size: 22px;
         color: $secondary;
         &:active,&:hover {opacity: 0.4;}
