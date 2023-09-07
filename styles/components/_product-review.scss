@@ -5,4 +5,17 @@
             border-bottom: 0;
         }
     }
+    .review-empty {
+        @include text-style(16,$secondary);
+        text-align: center;
+        padding: 36px 0;
+        strong {
+            color: $blue;
+        }
+    }
+    @include responsive(T) {
+        .review-empty {
+            padding: 16px 0;
+        }
+    }
 }
