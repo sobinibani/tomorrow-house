@@ -1,7 +1,35 @@
 .product-spec {
     padding-top: 20px;
+    height: 470px;
+    overflow: hidden;
+    position: relative;
+    &.is-open {
+        height: auto;
+        .button-wrapper {
+            display: none;
+        }
+    }
+
     .button-wrapper {
-        // display: none;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-bottom: 20px;
+        background-color: $white;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 20px + 55px;
+            left: 0;
+            width: 100%;
+            display:block;
+            height: 64px;
+            background-image: linear-gradient(to top, $white 0%, transparent 100%);
+        }
+        button {
+            width: 100%;
+        }
     }
 
     .product-table {
