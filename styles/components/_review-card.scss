@@ -28,6 +28,19 @@
     }
     &-body {
         margin-bottom: 20px;
+        .review-image {
+            width: 64px;
+            height: 64px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 8px;
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                object-fit: cover; // ★
+            }
+        }
         p {
             @include text-style(13,$primary);
         }
@@ -37,6 +50,12 @@
         button {
             width: 120px;
             margin-right: 8px;
+            i {
+                color: $white;
+                font-size: 20px;
+                margin-right:4px;
+                margin-left: -4px;
+            }
         }
         p {
             @include text-style(12,$primary);
@@ -58,6 +77,11 @@
             }
         }
         &-body {
+            .review-image {
+                width: 112px;
+                height: 112px;
+                margin-bottom: 16px;
+            }
             p {
                 @include text-style(14)
             }
