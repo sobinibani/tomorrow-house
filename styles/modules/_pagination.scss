@@ -11,6 +11,7 @@
     @include flexbox;
     .page-control {
         @extend %page-item-base;
+        width: 26px;
         border: 1px solid $border;
 
         &.page-prev {
@@ -32,7 +33,7 @@
         }
 
         .ic-chevron {
-            font-size: 12px;
+            font-size: 20px;
         }
     }
 
@@ -56,7 +57,7 @@
             }
             a,button {
                 min-width: 26px;
-                padding: 0 4px;
+                padding: 0 4px 2px;
                 @extend %page-item-base;
 
                 &:hover {
