@@ -1,13 +1,18 @@
 .product-card {
     &-image {
+        position: relative;
+        height: 0;
+        padding-bottom: 100%;
         border-radius: 4px;
         overflow: hidden;
         margin-bottom: 8px;
 
         img {
+            @include pos-center;
             display: block;
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
             transition: transform 200ms ease-in-out;
         }
     }
