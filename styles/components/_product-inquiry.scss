@@ -26,4 +26,16 @@
             display: none;
         }
     }
+
+    .inquiry-empty {
+        @include text-style(16, $secondary);
+        text-align: center;
+        padding: 48px 0;
+    }
+
+    @include responsive(T) {
+        .inquiry-empty {
+            padding: 20px 0;
+        }
+    }
 }
