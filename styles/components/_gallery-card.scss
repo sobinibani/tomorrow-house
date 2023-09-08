@@ -1,0 +1,42 @@
+.gallery-card {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+
+    &-image {
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &-detail {
+        @include flexbox(start);
+        width: 100%;
+        height: 54px;
+        background-color: rgba($black, 0.4);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 0 16px;
+
+        .avatar-32 {
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+
+        .username {
+            @include truncate;
+            @include text-style(16, $white);
+            font-weight: 700;
+            flex-grow: 1;
+            padding-right: 8px;
+        }
+
+        .order {
+            @include text-style(16, $white);
+            flex-shrink: 0;
+        }
+    }
+}
