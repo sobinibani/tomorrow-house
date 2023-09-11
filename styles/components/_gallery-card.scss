@@ -31,6 +31,10 @@
         .avatar-32 {
             margin-right: 8px;
             flex-shrink: 0;
+
+            &:active {
+                opacity: 0.4;
+            }
         }
 
         .username {
@@ -39,11 +43,22 @@
             font-weight: 700;
             flex-grow: 1;
             padding-right: 8px;
+
+            &:active {
+                color: $blue;
+            }
         }
 
         .order {
             @include text-style(16, $white);
             flex-shrink: 0;
+        }
+    }
+
+    @include responsive(D) {
+        &-detail {
+            .avatar-32:hover {opacity: 0.4;}
+            .username:hover {color: $blue;}
         }
     }
 }
