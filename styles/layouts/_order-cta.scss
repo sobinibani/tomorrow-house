@@ -25,6 +25,11 @@
             color: $secondary;
             font-weight: 400;
         }
+        &.is-active {
+            i {
+                color: $blue;
+            }
+        }
     }
     .btn-primary {
         flex-grow: 1;
