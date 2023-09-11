@@ -2,12 +2,13 @@ const productCarousel = tns({
   container: '.product-carousel .slider-list',
   controls: false,
   navContainer: '.product-carousel .thumbnail-list',
-  navAsThumbnails: true,
-  arrowKeys: true,
   autoplay: true,
   autoplayHoverPause: true,
   autoplayButtonOutput: false,
-  mouseDrage: true,
+  navAsThumbnails: true,
+  navAsThumbnails: true,
+  arrowKeys: true,
+  mouseDrag: true,
   preventScrollOnTouch: true
 });
 
@@ -20,7 +21,7 @@ const usergallery = tns({
   edgePadding: 16,
   loop: false,
   arrowKeys: true,
-  mouseDrage: true,
+  mouseDrag: true,
   preventScrollOnTouch: true,
   responsive: {
     760: {
