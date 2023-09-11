@@ -1,7 +1,7 @@
 .product-info {
     padding: 20px 0;
     &-header{
-        margin-bottom: 16px;;
+        margin-bottom: 16px;
         .info-brand {
             @include text-style(13,$blue);
             font-weight: 700;
@@ -67,7 +67,6 @@
     }
 
     @include responsive(T) {
-        margin-bottom: 40px;
         padding: 0;
         &-header {
             .info-brand {
