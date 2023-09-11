@@ -4,6 +4,10 @@
         height: 8px;
         margin: 0 -15px; // to do: grid constants로 뺴기;
         background-color: $border;
+
+        &.is-big {
+            height: 24px;
+        }
     }
 
     @include responsive(T) {
