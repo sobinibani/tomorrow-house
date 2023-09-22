@@ -1,6 +1,7 @@
 const productTab = document.querySelector(".product-tab")
 const productTabButtonList =productTab.querySelectorAll("button")
 let currentActiveTab = productTab.querySelector('.is-active')
+let disableUpdating = false
 
 const TOP_HEADER_DESKTOP = 80 + 50 + 54
 const TOP_HEADER_MOBILE = 50 + 40 + 40
@@ -12,6 +13,11 @@ function toggleActiveTab(){
         tabItem.classList.add('is-active')
         currentActiveTab.classList.remove('is-active')
         currentActiveTab = tabItem
+        
+        disableUpdating = true
+        setTimeout(() => {
+            disableUpdating = false
+        }, 1000);
     }
 }
 
@@ -53,12 +59,15 @@ function detectTabPanelPosition(){
         const position = window.scrollY + panel.getBoundingClientRect().top
         productTabPositionMap[id] = position
     })
+
+    updateActiveTabOnScroll()
 }
 
 function updateActiveTabOnScroll(){
-    // 스크롤 위치에 따라서 activeTab 업데이트
-    // 1. 현재 유저가 얼마만큼 스크롤을 했느냐 -> window.scrolly
-    // 2. 각 tabPanel y축 위치 -> productTabPositionMap
+    if(disableUpdating){
+        return
+    }
+
     const scrollAmount = window.scrollY +
     (window.innerWidth >= 768 ? TOP_HEADER_DESKTOP + 80 : TOP_HEADER_MOBILE + 8)
 
@@ -75,12 +84,19 @@ function updateActiveTabOnScroll(){
         newActivetab = productTabButtonList[0] // 상품정보 버튼
     }
 
+    const bodyHeight = document.body.offsetHeight + (window.innerWidth < 1200 ? 56 : 0)
+    if(window.scrollY + window.innerHeight == bodyHeight){
+        newActivetab = productTabButtonList[4] 
+    }
+
     if(newActivetab){
         newActivetab = newActivetab.parentNode
 
         if(newActivetab !== currentActiveTab){
             newActivetab.classList.add('is-active')
-            currentActiveTab.classList.remove('is-active')
+            if(currentActiveTab !== null){
+                currentActiveTab.classList.remove('is-active')
+            }
             currentActiveTab = newActivetab
         }
     }
